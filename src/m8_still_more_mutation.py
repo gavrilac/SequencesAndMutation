@@ -52,6 +52,14 @@ def run_test_RETURN_delete_negatives():
 
 
 def RETURN_delete_negatives(numbers):
+    y = []
+    for k in range (len(numbers)):
+        if numbers[k] < 0:
+            y = y
+        else:
+            y = y + [numbers[k]]
+    return y
+
     """
     Returns a NEW list that is the same as the given list of numbers,
     but with each negative number in the list DELETED from the list.
@@ -65,7 +73,7 @@ def RETURN_delete_negatives(numbers):
       :type numbers: list
     where the list is a list of numbers.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    # DONE: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
     #          from the module   m6_mutation   by using the notation:
@@ -111,6 +119,14 @@ def run_test_MUTATE_delete_negatives():
 
 
 def MUTATE_delete_negatives(numbers):
+    for k in range ( len(numbers)-1, -1, -1):
+         if numbers[k] < 0:
+             del numbers[k]
+
+
+
+
+
     """
     MUTATES the given list of numbers so that each negative number
     in the list is DELETED from the list.
@@ -124,7 +140,7 @@ def MUTATE_delete_negatives(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # DONE: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
     #          from the module   m6_mutation   by using the notation:
